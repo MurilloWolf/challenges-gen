@@ -15,7 +15,7 @@ export default function PagesRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/random-project" element={<RandomProject />} />
-        <Route path="/random-challenge/" element={<RandomChallenge />} />
+        <Route path="/random-challange" element={<RandomChallenge />} />
         <Route path="/project-list" element={<ProjectList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
