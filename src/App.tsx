@@ -1,9 +1,12 @@
+import ChallengesProvider from "./context/ChallengesContext";
 import PagesRoutes from "./pages/routes";
 
 export default function App() {
   return (
     <div className="container">
-      <PagesRoutes />
+      <ChallengesProvider>
+        <PagesRoutes />
+      </ChallengesProvider>
     </div>
   );
 }
