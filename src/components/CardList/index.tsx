@@ -4,7 +4,7 @@ import {
   ListMagnifyingGlass,
 } from "@phosphor-icons/react";
 
-import "./index.css";
+import "./cardList.css";
 export default function CardList() {
   const paragraphs = [
     "Get a random project",

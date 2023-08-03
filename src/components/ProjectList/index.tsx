@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getAllProjects } from "../../utils/getAllProjects";
 import { difficultyLevels } from "../../data";
+import "./projectList.css";
 
 export default function ProjectList() {
   const [search, setSearch] = useState("");

@@ -1,5 +1,5 @@
 import { GithubLogo, YoutubeLogo, LinkedinLogo } from "@phosphor-icons/react";
-import "./styles.css";
+import "./header.css";
 export default function Header() {
   return (
     <header className="header-wrapper">

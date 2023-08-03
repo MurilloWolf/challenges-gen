@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-row: 3;
+  grid-column: 1/ span 12;
+  text-align: center;
+  content: "";
+  top: 0; /* Ajuste para controlar a altura da sombra */
+  left: 0;
+  width: 100%;
+  height: 10vh; /* Altura da sombra, ajuste conforme necessário */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.18), transparent);
+}
