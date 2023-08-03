@@ -21,7 +21,10 @@
     margin-top: 6px;
 }
 
+
 .card-list-option{
+  text-decoration: none;
+  color: #242424;
   grid-column: 1ref;
   background-color: #8c8c9d32;
   cursor: pointer;
