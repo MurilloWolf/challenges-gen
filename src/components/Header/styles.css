@@ -1,0 +1,36 @@
+.header-wrapper {
+  grid-column: 1 / span 12;
+  grid-row: 1;
+}
+
+.header-title {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin: 1.5rem 0 0 0;
+  text-align: center;
+  grid-column: 1 / span 12;
+}
+
+.icon-list {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-right--position {
+  width: 100%;
+  max-width: 414px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 450px) {
+  .header-title {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .header-title {
+    font-size: 2.6em;
+  }
+}
