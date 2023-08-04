@@ -1,0 +1,8 @@
+
+.settings--show {
+    display: block;
+}
+
+.settings--hide {
+    display: none;
+}
