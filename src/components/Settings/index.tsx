@@ -24,29 +24,34 @@ export default function Settings() {
   };
 
   return (
-    <div className="circle-button-container">
-      <p>Project Levels:{projectLevels.toString()}</p>
-      <p>Punishment Levels:{punishmentLevels.toString()}</p>
-
-      <button
-        type="button"
-        className="circle-button"
-        onClick={() => setShowOptions(!showOptions)}
+    <div className="settings-wrapper">
+      <div
+        className={`options-container settings--${
+          showOptions ? "show" : "hide"
+        }`}
       >
-        <Gear size={32} />
-      </button>
-      {
-        <div className={`other settings--${showOptions ? "show" : "hide"}`}>
-          <fieldset>
-            <legend>Project Difficulty</legend>
+        <fieldset>
+          <legend>Projects</legend>
+          <div className="otptions-levels">
             {generateCheckBox("projectLevels")}
-          </fieldset>
-          <fieldset>
-            <legend>Punishment Difficulty</legend>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Punishments</legend>
+          <div className="otptions-levels">
             {generateCheckBox("punishmentLevels")}
-          </fieldset>
-        </div>
-      }
+          </div>
+        </fieldset>
+      </div>
+      <div className="btn-position">
+        <button
+          type="button"
+          className="circle-button"
+          onClick={() => setShowOptions(!showOptions)}
+        >
+          <Gear size={24} />
+        </button>
+      </div>
     </div>
   );
 }
