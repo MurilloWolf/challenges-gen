@@ -16,8 +16,8 @@ export const ActionTypes = {
 };
 
 export const initialState = {
-  projectLevels: [],
-  punishmentLevels: [],
+  projectLevels: ["easy", "medium", "hard"],
+  punishmentLevels: ["easy", "medium", "hard"],
 };
 
 export const reducer = (state: State, action: Action): State => {
