@@ -19,15 +19,19 @@ export default function CardList() {
       {titles.map((title, index) => {
         const Icon = icons[index];
         return (
-          <div className="card-list-option" key={index}>
-            <Link to={`/` + titles[index].toLowerCase().replace(" ", "-")}>
+          <Link
+            key={index}
+            className="link card-list-option"
+            to={`/` + titles[index].toLowerCase().replace(" ", "-")}
+          >
+            <div className="" key={index}>
               <div className="card-title">
                 <Icon size={36} />
                 <h2>{title}</h2>
               </div>
               <p className="card-paragraph">{paragraphs[index]}</p>
-            </Link>
-          </div>
+            </div>
+          </Link>
         );
       })}
     </div>

@@ -4,17 +4,14 @@ h2 {
   font-size: 1.25rem;
 }
 
-a {
+.link {
   font-weight: 500;
   text-decoration: none;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
 
 a:-webkit-any-link {
-  color: #213547
+  color: #2b333a
 }
 
 form {
