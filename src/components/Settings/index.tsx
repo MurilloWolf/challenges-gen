@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Gear } from "@phosphor-icons/react";
 import useChallenges from "../../hooks/useChallenges";
 import "./settings.css";
+import { useLocation } from "react-router-dom";
 
 export default function Settings() {
+  const location = useLocation();
   const difficultyLevels = ["easy", "medium", "hard"];
   const [showOptions, setShowOptions] = useState(false);
   const { changeDifficultyFrom, projectLevels, punishmentLevels } =
@@ -14,6 +16,11 @@ export default function Settings() {
       <label key={level}>
         <input
           type="checkbox"
+          checked={
+            controllerName === "projectLevels"
+              ? projectLevels.includes(level)
+              : punishmentLevels.includes(level)
+          }
           value={level}
           onChange={(e) => changeDifficultyFrom(e, controllerName)}
         />
@@ -22,6 +29,10 @@ export default function Settings() {
     ));
     return checkList;
   };
+
+  useEffect(() => {
+    setShowOptions(false);
+  }, [location.pathname]);
 
   return (
     <div className="settings-wrapper">
@@ -32,13 +43,13 @@ export default function Settings() {
       >
         <fieldset>
           <legend>Projects</legend>
-          <div className="otptions-levels">
+          <div className="options-levels">
             {generateCheckBox("projectLevels")}
           </div>
         </fieldset>
         <fieldset>
           <legend>Punishments</legend>
-          <div className="otptions-levels">
+          <div className="options-levels">
             {generateCheckBox("punishmentLevels")}
           </div>
         </fieldset>
