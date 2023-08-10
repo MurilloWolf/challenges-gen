@@ -6,7 +6,7 @@ import {
   ProjectList,
   NotFound,
 } from "./index";
-import { Header, Footer } from "../components/index";
+import { Header, Footer, Settings } from "../components/index";
 
 export default function PagesRoutes() {
   return (
@@ -19,6 +19,7 @@ export default function PagesRoutes() {
         <Route path="/project-list" element={<ProjectList />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Settings />
       <Footer />
     </BrowserRouter>
   );
